@@ -1,0 +1,26 @@
+[2022-10-17 10:29:51,999] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: my_first_dag.extract_user backfill__2022-09-09T00:00:00+00:00 [queued]>
+[2022-10-17 10:29:52,006] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: my_first_dag.extract_user backfill__2022-09-09T00:00:00+00:00 [queued]>
+[2022-10-17 10:29:52,006] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-10-17 10:29:52,007] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2022-10-17 10:29:52,007] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-10-17 10:29:52,017] {taskinstance.py:1377} INFO - Executing <Task(SimpleHttpOperator): extract_user> on 2022-09-09 00:00:00+00:00
+[2022-10-17 10:29:52,021] {standard_task_runner.py:52} INFO - Started process 9581 to run task
+[2022-10-17 10:29:52,024] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'my_first_dag', 'extract_user', 'backfill__2022-09-09T00:00:00+00:00', '--job-id', '91', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/user_processing.py', '--cfg-path', '/tmp/tmpag7643iu', '--error-file', '/tmp/tmpi93jgnky']
+[2022-10-17 10:29:52,025] {standard_task_runner.py:80} INFO - Job 91: Subtask extract_user
+[2022-10-17 10:29:52,186] {task_command.py:369} INFO - Running <TaskInstance: my_first_dag.extract_user backfill__2022-09-09T00:00:00+00:00 [running]> on host edecb506ad75
+[2022-10-17 10:29:52,231] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=my_first_dag
+AIRFLOW_CTX_TASK_ID=extract_user
+AIRFLOW_CTX_EXECUTION_DATE=2022-09-09T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=backfill__2022-09-09T00:00:00+00:00
+[2022-10-17 10:29:52,231] {http.py:102} INFO - Calling HTTP method
+[2022-10-17 10:29:52,237] {base.py:68} INFO - Using connection ID 'user_api' for task execution.
+[2022-10-17 10:29:52,238] {http.py:129} INFO - Sending 'GET' to url:  https://random-data-api.com/api/v2/users/
+[2022-10-17 10:29:53,188] {http.py:106} INFO - {"id":9316,"uid":"4085215b-b27f-4927-aef3-794fe8d54a35","password":"ZOw4bmQ93L","first_name":"Miguel","last_name":"Gleichner","username":"miguel.gleichner","email":"miguel.gleichner@email.com","avatar":"https://robohash.org/saepeassumendabeatae.png?size=300x300\u0026set=set1","gender":"Genderqueer","phone_number":"+886 (715) 088-5466","social_insurance_number":"256498528","date_of_birth":"1974-10-07","employment":{"title":"Marketing Architect","key_skill":"Self-motivated"},"address":{"city":"East Christena","street_name":"Herschel Track","street_address":"48182 Hilpert Fields","zip_code":"88064-1042","state":"Idaho","country":"United States","coordinates":{"lat":-58.75850005204789,"lng":-113.90895414139601}},"credit_card":{"cc_number":"4101-9672-2620-0392"},"subscription":{"plan":"Standard","status":"Pending","payment_method":"Cheque","term":"Annual"}}
+[2022-10-17 10:29:53,222] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=my_first_dag, task_id=extract_user, execution_date=20220909T000000, start_date=20221017T102952, end_date=20221017T102953
+[2022-10-17 10:29:53,288] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-10-17 10:29:53,498] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

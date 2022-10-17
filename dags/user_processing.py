@@ -11,13 +11,12 @@ from pandas import json_normalize
 
 def _process_user(ti):
     user = ti.xcom_pull(task_ids="extract_user")
-    user = user["results"][0]
     processed_user = json_normalize(
         {
-            "fistname": user["name"]["first"],
-            "lastname": user["name"]["last"],
-            "username": user["login"]["username"],
-            "password": user["login"]["password"],
+            "fistname": user["first_name"],
+            "lastname": user["last_name"],
+            "username": user["username"],
+            "password": user["password"],
             "email": user["email"],
         }
     )
@@ -56,14 +55,14 @@ create_table = PostgresOperator(
 )
 
 is_api_available = HttpSensor(
-    dag=dag, task_id="is_api_available", http_conn_id="user_api", endpoint="api/"
+    dag=dag, task_id="is_api_available", http_conn_id="user_api", endpoint="users/"
 )
 
 extract_user = SimpleHttpOperator(
     dag=dag,
     task_id="extract_user",
     http_conn_id="user_api",
-    endpoint="api/",
+    endpoint="users/",
     method="GET",
     response_filter=lambda response: json.loads(response.text),
     log_response=True,

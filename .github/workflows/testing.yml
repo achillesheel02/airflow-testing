@@ -29,4 +29,4 @@ jobs:
       - name: Check running containers
         run: docker ps -a
       - name: Run test suite
-        run: pytest tests/
+        run: docker exec -it test-airflow-scheduler-1 tests.sh

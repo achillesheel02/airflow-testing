@@ -5,7 +5,7 @@ import pytest
 from airflow.models import DAG
 from airflow.utils.dag_cycle_tester import check_cycle
 
-DAG_PATH = os.path.join(os.path.dirname(__file__), "..", "..", "dags/**/*.py")
+DAG_PATH = os.path.join(os.path.dirname(__file__), "..", "dags/**/*.py")
 DAG_FILES = glob.glob(DAG_PATH, recursive=True)
 
 

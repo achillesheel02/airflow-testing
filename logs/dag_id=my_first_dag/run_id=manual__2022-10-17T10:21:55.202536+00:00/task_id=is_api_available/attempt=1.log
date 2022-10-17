@@ -1,0 +1,240 @@
+[2022-10-17 10:21:57,249] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: my_first_dag.is_api_available manual__2022-10-17T10:21:55.202536+00:00 [queued]>
+[2022-10-17 10:21:57,255] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: my_first_dag.is_api_available manual__2022-10-17T10:21:55.202536+00:00 [queued]>
+[2022-10-17 10:21:57,256] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-10-17 10:21:57,256] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2022-10-17 10:21:57,256] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-10-17 10:21:57,265] {taskinstance.py:1377} INFO - Executing <Task(HttpSensor): is_api_available> on 2022-10-17 10:21:55.202536+00:00
+[2022-10-17 10:21:57,270] {standard_task_runner.py:52} INFO - Started process 3395 to run task
+[2022-10-17 10:21:57,273] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'my_first_dag', 'is_api_available', 'manual__2022-10-17T10:21:55.202536+00:00', '--job-id', '76', '--raw', '--subdir', 'DAGS_FOLDER/user_processing.py', '--cfg-path', '/tmp/tmp8nqwg33u', '--error-file', '/tmp/tmp_d71qwgr']
+[2022-10-17 10:21:57,274] {standard_task_runner.py:80} INFO - Job 76: Subtask is_api_available
+[2022-10-17 10:21:57,311] {task_command.py:369} INFO - Running <TaskInstance: my_first_dag.is_api_available manual__2022-10-17T10:21:55.202536+00:00 [running]> on host 48b5b9061ccc
+[2022-10-17 10:21:57,361] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=my_first_dag
+AIRFLOW_CTX_TASK_ID=is_api_available
+AIRFLOW_CTX_EXECUTION_DATE=2022-10-17T10:21:55.202536+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-10-17T10:21:55.202536+00:00
+[2022-10-17 10:21:57,362] {http.py:97} INFO - Poking: api/
+[2022-10-17 10:21:57,371] {base.py:68} INFO - Using connection ID 'user_api' for task execution.
+[2022-10-17 10:21:57,373] {http.py:129} INFO - Sending 'GET' to url:  https://random-data-api.com/api/v2/api/
+[2022-10-17 10:21:58,519] {http.py:142} ERROR - HTTP error: Not Found
+[2022-10-17 10:21:58,521] {http.py:143} ERROR - <!DOCTYPE html>
+<html>
+<head>
+  <title>The page you were looking for doesn't exist (404)</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <style>
+  .rails-default-error-page {
+    background-color: #EFEFEF;
+    color: #2E2F30;
+    text-align: center;
+    font-family: arial, sans-serif;
+    margin: 0;
+  }
+
+  .rails-default-error-page div.dialog {
+    width: 95%;
+    max-width: 33em;
+    margin: 4em auto 0;
+  }
+
+  .rails-default-error-page div.dialog > div {
+    border: 1px solid #CCC;
+    border-right-color: #999;
+    border-left-color: #999;
+    border-bottom-color: #BBB;
+    border-top: #B00100 solid 4px;
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+    background-color: white;
+    padding: 7px 12% 0;
+    box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
+  }
+
+  .rails-default-error-page h1 {
+    font-size: 100%;
+    color: #730E15;
+    line-height: 1.5em;
+  }
+
+  .rails-default-error-page div.dialog > p {
+    margin: 0 0 1em;
+    padding: 1em;
+    background-color: #F7F7F7;
+    border: 1px solid #CCC;
+    border-right-color: #999;
+    border-left-color: #999;
+    border-bottom-color: #999;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-top-color: #DADADA;
+    color: #666;
+    box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
+  }
+  </style>
+</head>
+
+<body class="rails-default-error-page">
+  <!-- This file lives in public/404.html -->
+  <div class="dialog">
+    <div>
+      <h1>The page you were looking for doesn't exist.</h1>
+      <p>You may have mistyped the address or the page may have moved.</p>
+    </div>
+    <p>If you are the application owner check the logs for more information.</p>
+  </div>
+</body>
+</html>
+
+[2022-10-17 10:22:58,586] {http.py:97} INFO - Poking: api/
+[2022-10-17 10:22:58,683] {base.py:68} INFO - Using connection ID 'user_api' for task execution.
+[2022-10-17 10:22:58,685] {http.py:129} INFO - Sending 'GET' to url:  https://random-data-api.com/api/v2/api/
+[2022-10-17 10:22:59,502] {http.py:142} ERROR - HTTP error: Not Found
+[2022-10-17 10:22:59,503] {http.py:143} ERROR - <!DOCTYPE html>
+<html>
+<head>
+  <title>The page you were looking for doesn't exist (404)</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <style>
+  .rails-default-error-page {
+    background-color: #EFEFEF;
+    color: #2E2F30;
+    text-align: center;
+    font-family: arial, sans-serif;
+    margin: 0;
+  }
+
+  .rails-default-error-page div.dialog {
+    width: 95%;
+    max-width: 33em;
+    margin: 4em auto 0;
+  }
+
+  .rails-default-error-page div.dialog > div {
+    border: 1px solid #CCC;
+    border-right-color: #999;
+    border-left-color: #999;
+    border-bottom-color: #BBB;
+    border-top: #B00100 solid 4px;
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+    background-color: white;
+    padding: 7px 12% 0;
+    box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
+  }
+
+  .rails-default-error-page h1 {
+    font-size: 100%;
+    color: #730E15;
+    line-height: 1.5em;
+  }
+
+  .rails-default-error-page div.dialog > p {
+    margin: 0 0 1em;
+    padding: 1em;
+    background-color: #F7F7F7;
+    border: 1px solid #CCC;
+    border-right-color: #999;
+    border-left-color: #999;
+    border-bottom-color: #999;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-top-color: #DADADA;
+    color: #666;
+    box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
+  }
+  </style>
+</head>
+
+<body class="rails-default-error-page">
+  <!-- This file lives in public/404.html -->
+  <div class="dialog">
+    <div>
+      <h1>The page you were looking for doesn't exist.</h1>
+      <p>You may have mistyped the address or the page may have moved.</p>
+    </div>
+    <p>If you are the application owner check the logs for more information.</p>
+  </div>
+</body>
+</html>
+
+[2022-10-17 10:23:59,562] {http.py:97} INFO - Poking: api/
+[2022-10-17 10:23:59,611] {base.py:68} INFO - Using connection ID 'user_api' for task execution.
+[2022-10-17 10:23:59,620] {http.py:129} INFO - Sending 'GET' to url:  https://random-data-api.com/api/v2/api/
+[2022-10-17 10:24:00,460] {http.py:142} ERROR - HTTP error: Not Found
+[2022-10-17 10:24:00,460] {http.py:143} ERROR - <!DOCTYPE html>
+<html>
+<head>
+  <title>The page you were looking for doesn't exist (404)</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <style>
+  .rails-default-error-page {
+    background-color: #EFEFEF;
+    color: #2E2F30;
+    text-align: center;
+    font-family: arial, sans-serif;
+    margin: 0;
+  }
+
+  .rails-default-error-page div.dialog {
+    width: 95%;
+    max-width: 33em;
+    margin: 4em auto 0;
+  }
+
+  .rails-default-error-page div.dialog > div {
+    border: 1px solid #CCC;
+    border-right-color: #999;
+    border-left-color: #999;
+    border-bottom-color: #BBB;
+    border-top: #B00100 solid 4px;
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+    background-color: white;
+    padding: 7px 12% 0;
+    box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
+  }
+
+  .rails-default-error-page h1 {
+    font-size: 100%;
+    color: #730E15;
+    line-height: 1.5em;
+  }
+
+  .rails-default-error-page div.dialog > p {
+    margin: 0 0 1em;
+    padding: 1em;
+    background-color: #F7F7F7;
+    border: 1px solid #CCC;
+    border-right-color: #999;
+    border-left-color: #999;
+    border-bottom-color: #999;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-top-color: #DADADA;
+    color: #666;
+    box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
+  }
+  </style>
+</head>
+
+<body class="rails-default-error-page">
+  <!-- This file lives in public/404.html -->
+  <div class="dialog">
+    <div>
+      <h1>The page you were looking for doesn't exist.</h1>
+      <p>You may have mistyped the address or the page may have moved.</p>
+    </div>
+    <p>If you are the application owner check the logs for more information.</p>
+  </div>
+</body>
+</html>
+
+[2022-10-17 10:24:13,934] {local_task_job.py:221} WARNING - State of this instance has been externally set to failed. Terminating instance.
+[2022-10-17 10:24:13,941] {process_utils.py:129} INFO - Sending Signals.SIGTERM to group 3395. PIDs of all processes in the group: [3395]
+[2022-10-17 10:24:13,942] {process_utils.py:80} INFO - Sending the signal Signals.SIGTERM to group 3395
+[2022-10-17 10:24:13,943] {taskinstance.py:1541} ERROR - Received SIGTERM. Terminating subprocesses.
+[2022-10-17 10:24:14,037] {process_utils.py:75} INFO - Process psutil.Process(pid=3395, status='terminated', exitcode=0, started='10:21:56') (3395) terminated with exit code 0
