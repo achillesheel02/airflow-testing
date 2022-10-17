@@ -23,6 +23,12 @@ jobs:
       # - name: Run Black
       #   run: find . -name "*.py" | xargs black --check
       - name: Install dependencies
-        run: pip install apache-airflow pytest
-      - name: Test DAG integrity
+        run: pip install apache-airflow pytest pytest-docker-tools
+      - name: Build the docker-compose stack
+        run: docker-compose up -d
+      - name: Check running containers
+        run: docker ps -a
+      - name: Check logs
+        run: docker logs backend
+      - name: Run test suite
         run: pytest tests/
