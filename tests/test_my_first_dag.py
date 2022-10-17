@@ -18,7 +18,7 @@ def test_task_count(test_dag: DAG):
     assert len(test_dag.tasks) == 5
 
 def test_dag_run(test_dag: DAG):
-    test_dag.run(start_date=datetime.datetime(2019,1,1).astimezone(),end_date= datetime.datetime(2019,1,1).astimezone(), donot_pickle=True)
+    test_dag.run(start_date=datetime.datetime.today().astimezone(),end_date= datetime.datetime.today().astimezone(), donot_pickle=True)
     # path = Path('/tmp/processed_user.csv')
     # assert path.exists()
     hook = PostgresHook(
