@@ -1,5 +1,5 @@
 #!/bin/bash
-pip install apache-airflow pytest
+pip install apache-airflow pytest pytest-helpers-namespace
 airflow connections add postgres \
           --conn-type postgres \
           --conn-host postgres \
